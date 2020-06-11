@@ -3,7 +3,7 @@ import * as k8s from "@pulumi/kubernetes";
 const namespace = "apps";
 const appLabels = { app: "nginx" };
 
-const appNs = new k8s.core.v1.Namespace(namespace, {
+const appNs = new k8s.core.v1.Namespace("apps-ns", {
   metadata: {
     name: namespace,
   }
