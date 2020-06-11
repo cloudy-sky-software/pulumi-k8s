@@ -5,7 +5,7 @@ const appLabels = { app: "nginx" };
 
 const appNs = new k8s.core.v1.Namespace(namespace, {
   metadata: {
-    namespace
+    name: namespace,
   }
 });
 const deployment = new k8s.apps.v1.Deployment("nginx", {
